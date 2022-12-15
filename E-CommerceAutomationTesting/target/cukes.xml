@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="263.127">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="18.966">
+        <system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "test1@example.com" field..............................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="12.408">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with valid "test1@example.com" and "P@ssw0rd"...............passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="11.956">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with invalid "wrong@example.com" and "P@ssw0rd".............passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_Currencies | Change currency to euro and check items price" name="Change currency to euro and check items price" time="13.056">
+        <system-out><![CDATA[Given click on the currency drop menu.......................................passed
+And choose euro.............................................................passed
+Then check that items price updated to euro.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Unknown" name="user could search using product name" time="13.191">
+        <system-out><![CDATA[Given enter product name in search field "book".............................passed
+When click on search button.................................................passed
+Then check the URL product name search result...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Unknown" name="user could search using product name 2" time="11.647">
+        <system-out><![CDATA[Given enter product name in search field "laptop"...........................passed
+When click on search button.................................................passed
+Then check the URL product name search result...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Unknown" name="user could search using product name 3" time="11.272">
+        <system-out><![CDATA[Given enter product name in search field "nike".............................passed
+When click on search button.................................................passed
+Then check the URL product name search result...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Unknown" name="user could search for product using sku" time="15.48">
+        <system-out><![CDATA[Given enter product Sku in search field "SCI_FAITH".........................passed
+When click on search button.................................................passed
+Then check the product sku search result....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Unknown" name="user could search for product using sku 2" time="16.257">
+        <system-out><![CDATA[Given enter product Sku in search field "APPLE_CAM".........................passed
+When click on search button.................................................passed
+Then check the product sku search result....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Unknown" name="user could search for product using sku 3" time="15.358">
+        <system-out><![CDATA[Given enter product Sku in search field "SF_PRO_11".........................passed
+When click on search button.................................................passed
+Then check the product sku search result....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Select sub category from main category" name="Hover on main category and click on sub category" time="11.361">
+        <system-out><![CDATA[Given Hover on main category and click on sub category......................passed
+When get text of page title.................................................passed
+Then check the selected category has the same title.........................passed
+And doing advanced assert using if..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Check home slider feature" name="Click on the first slider and check the URL" time="10.641">
+        <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given click on the first slider.............................................passed
+Then wait until the first slider url contains the expected result...........passed
+And check if the first slider expected url is the same as actual url........failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.StepDefinitions.D06_homeSlidersStepDef.checkIfTheFirstSliderExpectedUrlIsTheSameAsActualUrl(D06_homeSlidersStepDef.java:43)
+	at ✽.check if the first slider expected url is the same as actual url(file:///C:/Users/mahmo/OneDrive/Desktop/E-commerce%20automation%20testing%20project/E-CommerceAutomationTesting/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="Check home slider feature" name="Click on the second slider and check the URL" time="10.628">
+        <failure message="expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given click on the second slider............................................passed
+Then wait until the second slider url contains the expected result..........passed
+And check if the second slider expected url is the same as actual url.......failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.StepDefinitions.D06_homeSlidersStepDef.checkIfTheSecondSliderExpectedUrlIsTheSameAsActualUrl(D06_homeSlidersStepDef.java:50)
+	at ✽.check if the second slider expected url is the same as actual url(file:///C:/Users/mahmo/OneDrive/Desktop/E-commerce%20automation%20testing%20project/E-CommerceAutomationTesting/src/main/resources/features/F06_homeSliders.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="16.051">
+        <failure message="expected [https://www.facebook.com/nopCommerce] but found [https://web.facebook.com/nopCommerce?_rdc=1&amp;_rdr]" type="java.lang.AssertionError"><![CDATA[Given user opens facebook link..............................................passed
+When "https://www.facebook.com/nopCommerce" is opened in new tab............failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://www.facebook.com/nopCommerce] but found [https://web.facebook.com/nopCommerce?_rdc=1&_rdr]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.StepDefinitions.D07_followUsStepDef.isOpenedInNewTab(D07_followUsStepDef.java:40)
+	at ✽."https://www.facebook.com/nopCommerce" is opened in new tab(file:///C:/Users/mahmo/OneDrive/Desktop/E-commerce%20automation%20testing%20project/E-CommerceAutomationTesting/src/main/resources/features/F07_followUs.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="16.375">
+        <system-out><![CDATA[Given user opens twitter link...............................................passed
+When "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="16.061">
+        <failure message="expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[Given user opens rss link...................................................passed
+When "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.StepDefinitions.D07_followUsStepDef.isOpenedInNewTab(D07_followUsStepDef.java:40)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///C:/Users/mahmo/OneDrive/Desktop/E-commerce%20automation%20testing%20project/E-CommerceAutomationTesting/src/main/resources/features/F07_followUs.feature:13)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="14.741">
+        <system-out><![CDATA[Given user opens youtube link...............................................passed
+When "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Check Wishlist Feature" name="check add to wishlist" time="11.394">
+        <system-out><![CDATA[Given click on wishlist button ❤️ on this product "HTC One M8 Android L 5.0 Lollipop.passed
+When check success message and background color.............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Check Wishlist Feature" name="check add to wishlist and wait until adding message then check wishlist and Qty" time="15.358">
+        <system-out><![CDATA[Given click on wishlist button ❤️ on this product "HTC One M8 Android L 5.0 Lollipop.passed
+When wait until message and background color disappear......................passed
+Then click on Wishlist Tab on the top of the page...........................passed
+And get Qty value and verify it's bigger than 0.............................passed
+]]></system-out>
+    </testcase>
+</testsuite>
